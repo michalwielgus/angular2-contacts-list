@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ContactsService, Contact } from './contacts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  providers: [ContactsService]
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Contacts List';
+  contacts: Array<Contact>;
+
+  ngOnInit() {
+    this.contacts = this.contactsService.contacts;
+  };
+  constructor(private contactsService: ContactsService) {}
 }

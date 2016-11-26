@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-
+import {Component, Input} from '@angular/core';
+import { md5 } from '../gravatar.service';
 @Component({
-  selector: 'app-gravatar',
-  templateUrl: './gravatar.component.html',
-  styleUrls: ['./gravatar.component.css']
+    selector: 'app-gravatar',
+    templateUrl: './gravatar.component.html'
 })
-export class GravatarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class GravatarComponent {
+    @Input() size: number = 200;
+    @Input() email: string = '';
+    gravatarUrl = 'http://www.gravatar.com/avatar/' + md5(this.email) + '?s=' + this.size;
 }

@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial;
+  font-weight: 500;
+  width: 100%;
+  margin: auto;
+}
+
+.center {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+ul {
+  width: 270px;
+  padding: 0;
+  margin: auto;
+  border: solid 1px #9F9F9F;
+}
+li {
+  display: table;
+  width: 270px;
+  height: 84px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-bottom: dashed 1px #9F9F9F;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: #F2F2F2;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.left, .right {
+  display: table-cell;
+  vertical-align: middle;
+  height: 64px;
+}
+
+.left {
+  width: 84px;
+}
+
+.right {
+  width: 186px;
+}
